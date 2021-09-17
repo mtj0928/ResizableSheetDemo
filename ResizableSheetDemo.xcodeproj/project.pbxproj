@@ -9,21 +9,24 @@
 /* Begin PBXBuildFile section */
 		1898384B26F39CAB00A797C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1898384A26F39CAB00A797C7 /* AppDelegate.swift */; };
 		1898384D26F39CAB00A797C7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1898384C26F39CAB00A797C7 /* SceneDelegate.swift */; };
-		1898384F26F39CAB00A797C7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1898384E26F39CAB00A797C7 /* ViewController.swift */; };
-		1898385226F39CAB00A797C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1898385026F39CAB00A797C7 /* Main.storyboard */; };
 		1898385426F39CAC00A797C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1898385326F39CAC00A797C7 /* Assets.xcassets */; };
 		1898385726F39CAC00A797C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1898385526F39CAC00A797C7 /* LaunchScreen.storyboard */; };
+		1898385F26F39D2400A797C7 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1898385E26F39D2400A797C7 /* RootView.swift */; };
+		1898386226F39E1800A797C7 /* ResizableSheet in Frameworks */ = {isa = PBXBuildFile; productRef = 1898386126F39E1800A797C7 /* ResizableSheet */; };
+		1898386426F39F6300A797C7 /* SimpleSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1898386326F39F6300A797C7 /* SimpleSheet.swift */; };
+		1898386626F4971800A797C7 /* ComplexSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1898386526F4971800A797C7 /* ComplexSheet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1898384726F39CAB00A797C7 /* ResizableSheetDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ResizableSheetDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1898384A26F39CAB00A797C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1898384C26F39CAB00A797C7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1898384E26F39CAB00A797C7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1898385126F39CAB00A797C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1898385326F39CAC00A797C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1898385626F39CAC00A797C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1898385826F39CAC00A797C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1898385E26F39D2400A797C7 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		1898386326F39F6300A797C7 /* SimpleSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleSheet.swift; sourceTree = "<group>"; };
+		1898386526F4971800A797C7 /* ComplexSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplexSheet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1898386226F39E1800A797C7 /* ResizableSheet in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,8 +62,9 @@
 			children = (
 				1898384A26F39CAB00A797C7 /* AppDelegate.swift */,
 				1898384C26F39CAB00A797C7 /* SceneDelegate.swift */,
-				1898384E26F39CAB00A797C7 /* ViewController.swift */,
-				1898385026F39CAB00A797C7 /* Main.storyboard */,
+				1898385E26F39D2400A797C7 /* RootView.swift */,
+				1898386326F39F6300A797C7 /* SimpleSheet.swift */,
+				1898386526F4971800A797C7 /* ComplexSheet.swift */,
 				1898385326F39CAC00A797C7 /* Assets.xcassets */,
 				1898385526F39CAC00A797C7 /* LaunchScreen.storyboard */,
 				1898385826F39CAC00A797C7 /* Info.plist */,
@@ -83,6 +88,9 @@
 			dependencies = (
 			);
 			name = ResizableSheetDemo;
+			packageProductDependencies = (
+				1898386126F39E1800A797C7 /* ResizableSheet */,
+			);
 			productName = ResizableSheetDemo;
 			productReference = 1898384726F39CAB00A797C7 /* ResizableSheetDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +119,9 @@
 				Base,
 			);
 			mainGroup = 1898383E26F39CAB00A797C7;
+			packageReferences = (
+				1898386026F39E1800A797C7 /* XCRemoteSwiftPackageReference "ResizableSheet" */,
+			);
 			productRefGroup = 1898384826F39CAB00A797C7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,7 +138,6 @@
 			files = (
 				1898385726F39CAC00A797C7 /* LaunchScreen.storyboard in Resources */,
 				1898385426F39CAC00A797C7 /* Assets.xcassets in Resources */,
-				1898385226F39CAB00A797C7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +148,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1898384F26F39CAB00A797C7 /* ViewController.swift in Sources */,
 				1898384B26F39CAB00A797C7 /* AppDelegate.swift in Sources */,
 				1898384D26F39CAB00A797C7 /* SceneDelegate.swift in Sources */,
+				1898385F26F39D2400A797C7 /* RootView.swift in Sources */,
+				1898386426F39F6300A797C7 /* SimpleSheet.swift in Sources */,
+				1898386626F4971800A797C7 /* ComplexSheet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		1898385026F39CAB00A797C7 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1898385126F39CAB00A797C7 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		1898385526F39CAC00A797C7 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -294,7 +298,6 @@
 				INFOPLIST_FILE = ResizableSheetDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -322,7 +325,6 @@
 				INFOPLIST_FILE = ResizableSheetDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -360,6 +362,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1898386026F39E1800A797C7 /* XCRemoteSwiftPackageReference "ResizableSheet" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mtj0928/ResizableSheet";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1898386126F39E1800A797C7 /* ResizableSheet */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1898386026F39E1800A797C7 /* XCRemoteSwiftPackageReference "ResizableSheet" */;
+			productName = ResizableSheet;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1898383F26F39CAB00A797C7 /* Project object */;
 }
