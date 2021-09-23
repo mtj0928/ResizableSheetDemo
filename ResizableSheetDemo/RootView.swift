@@ -12,8 +12,12 @@ struct RootView: View {
 
     let windowScene: UIWindowScene?
 
+    // 1. ResizableSheetCenter の作成
     var resizableSheetCenter: ResizableSheetCenter? {
-        windowScene.flatMap(ResizableSheetCenter.resolve(for:))
+        guard let windowScene = windowScene else {
+            return nil
+        }
+        return ResizableSheetCenter.resolve(for: windowScene)
     }
 
     var body: some View {
@@ -22,17 +26,43 @@ struct RootView: View {
                 NavigationLink("Simple Sheet") {
                     SimpleSheet()
                 }
-                NavigationLink("Complex Sheet") {
-                    ComplexSheet()
+                .padding(.vertical)
+
+                NavigationLink("Dynamic Layout Sheet") {
+                    DynamicLayoutSheet()
+                }.padding(.vertical)
+
+                NavigationLink("Medium Sheet") {
+                    MediumSheet()
                 }
+                .padding(.vertical)
+
+                NavigationLink("Parent Controllable Sheet") {
+                    ParentControllabelSheet()
+                }
+                .padding(.vertical)
+
+                NavigationLink("Scrollable Sheet") {
+                    ScrollableSheet()
+                }
+                .padding(.vertical)
+
+                NavigationLink("Customized Sheet") {
+                    FullCustomizedSheet()
+                        .ignoresSafeArea()
+                }
+                .padding(.vertical)
             }
         }
-        .environment(\.resizableSheetCenter, resizableSheetCenter)
+        // 2. ResizableSheetCenterを埋め込む
+        .environment(\.resizableSheetCenter, resizableSheetCenter ?? PreviewResizableSheetCenter.shared)
     }
 }
 
 struct RootView_Previews: PreviewProvider {
     static var previews: some View {
-        RootView(windowScene: nil)
+        ResizableSheetPreview {
+            RootView(windowScene: nil)
+        }
     }
 }

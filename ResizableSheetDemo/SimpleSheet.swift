@@ -11,29 +11,24 @@ import ResizableSheet
 struct SimpleSheet: View {
 
     @State var state: ResizableSheetState = .hidden
-    @Environment(\.resizableSheetCenter) var resizableSheetCenter
 
     var body: some View {
         Button("Show sheet") {
-            state = .midium
+            state = .medium
         }
-        .onAppear {
-            resizableSheetCenter?.prepare(for: ResizableSheet(
-                id: "id",
-                state: $state,
-                config: DefaultResizableSheetConfiguration(),
-                content: { context in
-                    Text("text").padding()
-                }))
-        }
-        .onDisappear {
-            resizableSheetCenter?.remove(id: "id")
+        .resizableSheet($state) { builder in
+            builder.content { context in
+                Text("text").padding()
+            }
         }
     }
 }
 
 struct SimpleSheet_Previews: PreviewProvider {
+
     static var previews: some View {
-        SimpleSheet()
+        ResizableSheetPreview {
+            SimpleSheet()
+        }
     }
 }
